@@ -1,16 +1,16 @@
 :root {
-  --bg: #f7f4ed;
+  --bg: #f4f6f3;
   --surface: #ffffff;
-  --surface-soft: #f2f7f6;
-  --ink: #17211f;
-  --muted: #5e6c68;
-  --line: #dce4df;
-  --teal: #0f766e;
-  --blue: #2563eb;
-  --amber: #b45309;
-  --green: #15803d;
-  --red: #b91c1c;
-  --shadow: 0 16px 40px rgba(28, 43, 39, 0.08);
+  --surface-soft: #eef3ef;
+  --ink: #17201d;
+  --muted: #596761;
+  --line: #d4ddd6;
+  --teal: #146c5f;
+  --blue: #285e9f;
+  --amber: #9a5a10;
+  --green: #25764a;
+  --red: #a33a32;
+  --shadow: 0 1px 2px rgba(26, 38, 34, 0.08);
 }
 
 * {
@@ -52,15 +52,17 @@ a:hover {
 .app-shell {
   width: min(1440px, 100%);
   margin: 0 auto;
-  padding: 24px;
+  padding: 18px 24px 28px;
 }
 
 .topbar {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px 0 22px;
+  padding: 8px 0 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 16px;
 }
 
 .topbar h1,
@@ -73,14 +75,15 @@ a:hover {
 }
 
 .topbar h1 {
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 0.95;
+  font-size: clamp(1.75rem, 3vw, 2.8rem);
+  line-height: 1;
+  font-weight: 850;
 }
 
 .eyebrow {
   margin: 0 0 6px;
   color: var(--teal);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -92,19 +95,19 @@ a:hover {
   gap: 6px;
   padding: 5px;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.72);
+  border-radius: 6px;
+  background: #ffffff;
 }
 
 .tab-button,
 .filter-button {
   min-height: 38px;
   border: 0;
-  border-radius: 6px;
+  border-radius: 5px;
   background: transparent;
   color: var(--muted);
   font-weight: 700;
-  padding: 8px 12px;
+  padding: 8px 11px;
 }
 
 .tab-button.is-active,
@@ -138,14 +141,14 @@ a:hover {
 .news-tool,
 .advanced-card {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: var(--surface);
   box-shadow: var(--shadow);
 }
 
 .stat-card {
-  min-height: 100px;
-  padding: 18px;
+  min-height: 88px;
+  padding: 16px;
 }
 
 .stat-card span,
@@ -158,7 +161,7 @@ a:hover {
 .stat-card strong {
   display: block;
   margin-top: 8px;
-  font-size: 2rem;
+  font-size: 1.7rem;
   line-height: 1.1;
 }
 
@@ -176,7 +179,7 @@ a:hover {
 .news-tool,
 .source-panel,
 .advanced-card {
-  padding: 18px;
+  padding: 16px;
 }
 
 .section-heading {
@@ -206,7 +209,7 @@ a:hover {
 
 .filter-button {
   border: 1px solid var(--line);
-  background: var(--surface-soft);
+  background: #ffffff;
 }
 
 .lesson-list {
@@ -222,7 +225,7 @@ a:hover {
   gap: 8px;
   align-items: center;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #ffffff;
   color: var(--ink);
   padding: 12px;
@@ -232,7 +235,7 @@ a:hover {
 .lesson-button:hover,
 .lesson-button.is-active {
   border-color: var(--teal);
-  background: var(--surface-soft);
+  background: #f7faf8;
 }
 
 .lesson-button strong {
@@ -270,7 +273,7 @@ a:hover {
   align-items: center;
   min-height: 28px;
   border-radius: 999px;
-  background: var(--surface-soft);
+  background: #e8f1ed;
   color: var(--teal);
   font-size: 0.8rem;
   font-weight: 800;
@@ -278,8 +281,8 @@ a:hover {
 }
 
 .lesson-view h2 {
-  font-size: clamp(1.7rem, 3vw, 2.7rem);
-  line-height: 1;
+  font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+  line-height: 1.08;
 }
 
 .lead {
@@ -315,7 +318,7 @@ a:hover {
 .question-block {
   padding: 14px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fbfcfb;
   margin-bottom: 10px;
 }
@@ -393,7 +396,7 @@ a:hover {
 
 .weak-spot {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 10px;
   background: #fbfcfb;
 }
@@ -410,8 +413,8 @@ a:hover {
 .next-card {
   display: grid;
   gap: 8px;
-  border-radius: 8px;
-  background: #ecfdf5;
+  border-radius: 6px;
+  background: #e8f1ed;
   padding: 14px;
   margin: 16px 0;
 }
@@ -425,7 +428,7 @@ a:hover {
 }
 
 .indicator-card {
-  min-height: 276px;
+  min-height: 260px;
   padding: 16px;
   display: grid;
   gap: 12px;
@@ -437,7 +440,7 @@ a:hover {
 }
 
 .indicator-value {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 900;
   line-height: 1;
 }
@@ -481,7 +484,7 @@ a:hover {
 .signal-grid article {
   min-height: 120px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 14px;
   background: #fbfcfb;
 }
@@ -534,7 +537,7 @@ a:hover {
 
 .analysis-card {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fbfcfb;
   padding: 14px;
 }
@@ -593,7 +596,7 @@ a:hover {
 .journal-entry,
 .metric-card {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fbfcfb;
   padding: 14px;
 }
@@ -631,7 +634,7 @@ a:hover {
 
 .impact-list article {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 10px;
   background: #ffffff;
 }
@@ -741,6 +744,6 @@ a:hover {
   }
 
   .lesson-view h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }

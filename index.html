@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Finance Coach</title>
+    <title>Finance Desk</title>
     <meta
       name="description"
-      content="A personal economics and finance study coach with lessons, quizzes, progress tracking, and real economic data practice."
+      content="A focused economics and finance practice desk with lessons, quizzes, real indicators, headline review, and applied market drills."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,14 +14,14 @@
     <div class="app-shell">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Economics and finance</p>
-          <h1>Finance Coach</h1>
+          <p class="eyebrow">Markets / Economics / Companies</p>
+          <h1>Finance Desk</h1>
         </div>
         <nav class="tab-list" aria-label="App sections">
-          <button class="tab-button is-active" type="button" data-tab="learn">Learn</button>
-          <button class="tab-button" type="button" data-tab="data">Data Lab</button>
-          <button class="tab-button" type="button" data-tab="news">News Lab</button>
-          <button class="tab-button" type="button" data-tab="advanced">Advanced</button>
+          <button class="tab-button is-active" type="button" data-tab="learn">Lessons</button>
+          <button class="tab-button" type="button" data-tab="data">Indicators</button>
+          <button class="tab-button" type="button" data-tab="news">Headlines</button>
+          <button class="tab-button" type="button" data-tab="advanced">Practice</button>
         </nav>
       </header>
 
@@ -49,8 +49,8 @@
           <div class="workspace-grid">
             <aside class="lesson-sidebar" aria-label="Curriculum">
               <div class="section-heading">
-                <p class="eyebrow">Path</p>
-                <h2>Lessons</h2>
+                <p class="eyebrow">Study path</p>
+                <h2>Topics</h2>
               </div>
               <div class="level-filters" id="level-filters" aria-label="Filter lessons by level"></div>
               <div class="lesson-list" id="lesson-list"></div>
@@ -78,7 +78,7 @@
 
               <div class="quiz-panel">
                 <div class="section-heading compact">
-                  <p class="eyebrow">Practice</p>
+                  <p class="eyebrow">Check</p>
                   <h3>Quiz</h3>
                 </div>
                 <form id="quiz-form"></form>
@@ -92,7 +92,7 @@
 
             <aside class="review-panel" aria-label="Review">
               <div class="section-heading">
-                <p class="eyebrow">Review</p>
+                <p class="eyebrow">Review queue</p>
                 <h2>Weak spots</h2>
               </div>
               <div id="weak-spots" class="weak-spot-list"></div>
@@ -112,8 +112,8 @@
         <section class="tab-panel" id="data-panel">
           <div class="panel-header">
             <div>
-              <p class="eyebrow">Real data</p>
-              <h2>Economic Indicators</h2>
+              <p class="eyebrow">Official data</p>
+              <h2>Indicator Board</h2>
             </div>
             <p id="data-updated" class="muted"></p>
           </div>
@@ -147,8 +147,8 @@
           <div class="news-layout">
             <section class="news-tool">
               <div class="section-heading">
-                <p class="eyebrow">Practice</p>
-                <h2>Headline Interpreter</h2>
+                <p class="eyebrow">News reading</p>
+                <h2>Headline Review</h2>
               </div>
               <div class="sample-row" id="sample-headlines" aria-label="Sample headlines"></div>
               <label for="headline-input">Headline</label>
@@ -163,7 +163,7 @@
                 rows="7"
                 placeholder="Paste a short excerpt or write what happened."
               ></textarea>
-              <button class="primary-button" type="button" id="analyze-headline">Analyze</button>
+              <button class="primary-button" type="button" id="analyze-headline">Review headline</button>
               <div id="headline-output" class="headline-output" aria-live="polite"></div>
             </section>
 
@@ -182,25 +182,25 @@
         <section class="tab-panel" id="advanced-panel">
           <div class="panel-header">
             <div>
-              <p class="eyebrow">Advanced practice</p>
-              <h2>Reasoning Lab</h2>
+              <p class="eyebrow">Applied practice</p>
+              <h2>Market Workbench</h2>
             </div>
-            <p class="muted">Scenario thinking, market reactions, data reading, and decision journaling.</p>
+            <p class="muted">Scenarios, market reactions, indicator reading, and decision notes.</p>
           </div>
 
           <div class="advanced-grid">
             <section class="advanced-card span-2">
               <div class="section-heading">
-                <p class="eyebrow">Adaptive</p>
-                <h3>Current Training Focus</h3>
+                <p class="eyebrow">Review queue</p>
+                <h3>Current Focus</h3>
               </div>
               <div id="adaptive-review" class="adaptive-review"></div>
             </section>
 
             <section class="advanced-card">
               <div class="section-heading">
-                <p class="eyebrow">Simulator</p>
-                <h3>Scenario Reasoning</h3>
+                <p class="eyebrow">Scenarios</p>
+                <h3>Scenario Drill</h3>
               </div>
               <div id="scenario-simulator"></div>
             </section>
@@ -208,7 +208,7 @@
             <section class="advanced-card">
               <div class="section-heading">
                 <p class="eyebrow">Markets</p>
-                <h3>Reaction Trainer</h3>
+                <h3>Market Reactions</h3>
               </div>
               <div id="reaction-trainer"></div>
             </section>
@@ -216,7 +216,7 @@
             <section class="advanced-card">
               <div class="section-heading">
                 <p class="eyebrow">FRED data</p>
-                <h3>Data Detective</h3>
+                <h3>Indicator Drill</h3>
               </div>
               <div id="data-detective"></div>
             </section>
@@ -224,7 +224,7 @@
             <section class="advanced-card">
               <div class="section-heading">
                 <p class="eyebrow">Companies</p>
-                <h3>Analysis Mode</h3>
+                <h3>Company Screen</h3>
               </div>
               <div class="company-grid">
                 <label>
@@ -257,13 +257,13 @@
                 </label>
               </div>
               <button class="secondary-button" type="button" id="load-company-sample">Load sample</button>
-              <button class="primary-button" type="button" id="analyze-company">Analyze company</button>
+              <button class="primary-button" type="button" id="analyze-company">Screen company</button>
               <div id="company-output" class="headline-output" aria-live="polite"></div>
             </section>
 
             <section class="advanced-card span-2">
               <div class="section-heading">
-                <p class="eyebrow">Practice portfolio</p>
+                <p class="eyebrow">Paper portfolio</p>
                 <h3>Decision Journal</h3>
               </div>
               <div class="journal-grid">
