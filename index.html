@@ -21,6 +21,7 @@
           <button class="tab-button is-active" type="button" data-tab="learn">Learn</button>
           <button class="tab-button" type="button" data-tab="data">Data Lab</button>
           <button class="tab-button" type="button" data-tab="news">News Lab</button>
+          <button class="tab-button" type="button" data-tab="advanced">Advanced</button>
         </nav>
       </header>
 
@@ -149,6 +150,7 @@
                 <p class="eyebrow">Practice</p>
                 <h2>Headline Interpreter</h2>
               </div>
+              <div class="sample-row" id="sample-headlines" aria-label="Sample headlines"></div>
               <label for="headline-input">Headline</label>
               <input
                 id="headline-input"
@@ -174,6 +176,126 @@
               <a href="https://www.investor.gov/" target="_blank" rel="noreferrer">Investor.gov basics</a>
               <a href="https://www.federalreserve.gov/monetarypolicy.htm" target="_blank" rel="noreferrer">Federal Reserve policy</a>
             </aside>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="advanced-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Advanced practice</p>
+              <h2>Reasoning Lab</h2>
+            </div>
+            <p class="muted">Scenario thinking, market reactions, data reading, and decision journaling.</p>
+          </div>
+
+          <div class="advanced-grid">
+            <section class="advanced-card span-2">
+              <div class="section-heading">
+                <p class="eyebrow">Adaptive</p>
+                <h3>Current Training Focus</h3>
+              </div>
+              <div id="adaptive-review" class="adaptive-review"></div>
+            </section>
+
+            <section class="advanced-card">
+              <div class="section-heading">
+                <p class="eyebrow">Simulator</p>
+                <h3>Scenario Reasoning</h3>
+              </div>
+              <div id="scenario-simulator"></div>
+            </section>
+
+            <section class="advanced-card">
+              <div class="section-heading">
+                <p class="eyebrow">Markets</p>
+                <h3>Reaction Trainer</h3>
+              </div>
+              <div id="reaction-trainer"></div>
+            </section>
+
+            <section class="advanced-card">
+              <div class="section-heading">
+                <p class="eyebrow">FRED data</p>
+                <h3>Data Detective</h3>
+              </div>
+              <div id="data-detective"></div>
+            </section>
+
+            <section class="advanced-card">
+              <div class="section-heading">
+                <p class="eyebrow">Companies</p>
+                <h3>Analysis Mode</h3>
+              </div>
+              <div class="company-grid">
+                <label>
+                  Revenue
+                  <input id="company-revenue" type="number" min="0" step="0.01" placeholder="1000" />
+                </label>
+                <label>
+                  Gross profit
+                  <input id="company-gross-profit" type="number" min="0" step="0.01" placeholder="420" />
+                </label>
+                <label>
+                  Operating income
+                  <input id="company-operating-income" type="number" step="0.01" placeholder="180" />
+                </label>
+                <label>
+                  Net income
+                  <input id="company-net-income" type="number" step="0.01" placeholder="120" />
+                </label>
+                <label>
+                  Cash
+                  <input id="company-cash" type="number" min="0" step="0.01" placeholder="250" />
+                </label>
+                <label>
+                  Debt
+                  <input id="company-debt" type="number" min="0" step="0.01" placeholder="300" />
+                </label>
+                <label>
+                  Market cap
+                  <input id="company-market-cap" type="number" min="0" step="0.01" placeholder="2400" />
+                </label>
+              </div>
+              <button class="secondary-button" type="button" id="load-company-sample">Load sample</button>
+              <button class="primary-button" type="button" id="analyze-company">Analyze company</button>
+              <div id="company-output" class="headline-output" aria-live="polite"></div>
+            </section>
+
+            <section class="advanced-card span-2">
+              <div class="section-heading">
+                <p class="eyebrow">Practice portfolio</p>
+                <h3>Decision Journal</h3>
+              </div>
+              <div class="journal-grid">
+                <label>
+                  Decision
+                  <select id="journal-decision">
+                    <option value="Balanced allocation">Balanced allocation</option>
+                    <option value="More cash">More cash</option>
+                    <option value="More bonds">More bonds</option>
+                    <option value="More stocks">More stocks</option>
+                    <option value="Wait and observe">Wait and observe</option>
+                  </select>
+                </label>
+                <label>
+                  Confidence
+                  <select id="journal-confidence">
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                    <option value="High">High</option>
+                  </select>
+                </label>
+              </div>
+              <label for="journal-rationale">Reasoning</label>
+              <textarea
+                id="journal-rationale"
+                rows="5"
+                placeholder="Explain which indicators or news signals influenced your decision."
+              ></textarea>
+              <button class="secondary-button" type="button" id="load-journal-sample">Use sample reasoning</button>
+              <button class="primary-button" type="button" id="save-journal-entry">Save decision</button>
+              <div id="journal-list" class="journal-list"></div>
+            </section>
           </div>
         </section>
       </main>

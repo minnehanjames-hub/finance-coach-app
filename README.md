@@ -9,6 +9,11 @@ A personal economics and finance study coach. It starts with beginner topics and
 - A level system based on completed lessons and quiz performance
 - A data lab powered by FRED economic data
 - A headline interpreter for practicing economic news analysis
+- Scenario simulator for second-order economic reasoning
+- Market reaction trainer for stocks, bonds, housing, consumers, and rates
+- Data Detective mode that connects real FRED indicators to interpretation questions
+- Company analysis mode for practicing margins, debt, valuation, and quality checks
+- Paper decision journal saved locally in the browser
 
 ## Real data
 
@@ -29,6 +34,8 @@ data/economic-indicators.json
 ## News data plan
 
 The current News Lab lets you paste real headlines or excerpts and practice interpreting them. Live news feeds usually require API keys, so those should be fetched through a backend or a GitHub Action using repository secrets. Do not put news API keys directly into a public GitHub Pages frontend.
+
+The built-in sample headlines are static practice prompts. They do not fetch live articles yet.
 
 Good future sources:
 
