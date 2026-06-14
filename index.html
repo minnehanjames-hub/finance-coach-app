@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finance Coach</title>
+    <meta
+      name="description"
+      content="A personal economics and finance study coach with lessons, quizzes, progress tracking, and real economic data practice."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Economics and finance</p>
+          <h1>Finance Coach</h1>
+        </div>
+        <nav class="tab-list" aria-label="App sections">
+          <button class="tab-button is-active" type="button" data-tab="learn">Learn</button>
+          <button class="tab-button" type="button" data-tab="data">Data Lab</button>
+          <button class="tab-button" type="button" data-tab="news">News Lab</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="tab-panel is-active" id="learn-panel">
+          <section class="stats-grid" aria-label="Progress summary">
+            <article class="stat-card">
+              <span>Current level</span>
+              <strong id="current-level">Beginner</strong>
+            </article>
+            <article class="stat-card">
+              <span>Mastery</span>
+              <strong id="mastery-score">0%</strong>
+            </article>
+            <article class="stat-card">
+              <span>Lessons done</span>
+              <strong id="lessons-completed">0 / 0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Study days</span>
+              <strong id="study-days">0</strong>
+            </article>
+          </section>
+
+          <div class="workspace-grid">
+            <aside class="lesson-sidebar" aria-label="Curriculum">
+              <div class="section-heading">
+                <p class="eyebrow">Path</p>
+                <h2>Lessons</h2>
+              </div>
+              <div class="level-filters" id="level-filters" aria-label="Filter lessons by level"></div>
+              <div class="lesson-list" id="lesson-list"></div>
+            </aside>
+
+            <section class="lesson-view" aria-live="polite">
+              <div class="lesson-meta">
+                <span id="lesson-level">Beginner</span>
+                <span id="lesson-time">10 min</span>
+              </div>
+              <h2 id="lesson-title">Loading lesson</h2>
+              <p id="lesson-concept" class="lead"></p>
+
+              <div class="lesson-block">
+                <h3>Why it matters</h3>
+                <p id="lesson-why"></p>
+              </div>
+
+              <div class="lesson-block">
+                <h3>Real-world example</h3>
+                <p id="lesson-example"></p>
+              </div>
+
+              <div class="term-row" id="key-terms"></div>
+
+              <div class="quiz-panel">
+                <div class="section-heading compact">
+                  <p class="eyebrow">Practice</p>
+                  <h3>Quiz</h3>
+                </div>
+                <form id="quiz-form"></form>
+                <div class="quiz-actions">
+                  <button class="primary-button" type="button" id="submit-quiz">Check answers</button>
+                  <button class="secondary-button" type="button" id="reset-quiz">Try again</button>
+                </div>
+                <div id="quiz-result" class="quiz-result" aria-live="polite"></div>
+              </div>
+            </section>
+
+            <aside class="review-panel" aria-label="Review">
+              <div class="section-heading">
+                <p class="eyebrow">Review</p>
+                <h2>Weak spots</h2>
+              </div>
+              <div id="weak-spots" class="weak-spot-list"></div>
+
+              <div class="next-card">
+                <span>Next recommended lesson</span>
+                <strong id="next-lesson">Start the first lesson</strong>
+              </div>
+
+              <button class="secondary-button full-width" type="button" id="reset-progress">
+                Reset progress
+              </button>
+            </aside>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="data-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Real data</p>
+              <h2>Economic Indicators</h2>
+            </div>
+            <p id="data-updated" class="muted"></p>
+          </div>
+
+          <div class="indicator-grid" id="indicator-grid"></div>
+
+          <section class="source-panel">
+            <h3>What to look for</h3>
+            <div class="signal-grid">
+              <article>
+                <strong>Inflation</strong>
+                <p>Rising prices can reduce purchasing power and influence interest-rate decisions.</p>
+              </article>
+              <article>
+                <strong>Jobs</strong>
+                <p>Low unemployment often signals a strong labor market, but it can also affect wage pressure.</p>
+              </article>
+              <article>
+                <strong>Rates</strong>
+                <p>Higher rates usually make borrowing more expensive and can pressure asset prices.</p>
+              </article>
+              <article>
+                <strong>Growth</strong>
+                <p>GDP tracks total economic output and helps show whether the economy is expanding.</p>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="tab-panel" id="news-panel">
+          <div class="news-layout">
+            <section class="news-tool">
+              <div class="section-heading">
+                <p class="eyebrow">Practice</p>
+                <h2>Headline Interpreter</h2>
+              </div>
+              <label for="headline-input">Headline</label>
+              <input
+                id="headline-input"
+                type="text"
+                placeholder="Example: Fed holds rates steady as inflation cools"
+              />
+              <label for="article-input">Notes or article excerpt</label>
+              <textarea
+                id="article-input"
+                rows="7"
+                placeholder="Paste a short excerpt or write what happened."
+              ></textarea>
+              <button class="primary-button" type="button" id="analyze-headline">Analyze</button>
+              <div id="headline-output" class="headline-output" aria-live="polite"></div>
+            </section>
+
+            <aside class="source-panel">
+              <h3>Reliable places to check</h3>
+              <a href="https://fred.stlouisfed.org/" target="_blank" rel="noreferrer">FRED economic data</a>
+              <a href="https://www.bls.gov/cpi/" target="_blank" rel="noreferrer">BLS inflation data</a>
+              <a href="https://www.bea.gov/data/gdp/gross-domestic-product" target="_blank" rel="noreferrer">BEA GDP data</a>
+              <a href="https://www.bls.gov/news.release/empsit.toc.htm" target="_blank" rel="noreferrer">BLS jobs report</a>
+              <a href="https://www.investor.gov/" target="_blank" rel="noreferrer">Investor.gov basics</a>
+              <a href="https://www.federalreserve.gov/monetarypolicy.htm" target="_blank" rel="noreferrer">Federal Reserve policy</a>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
