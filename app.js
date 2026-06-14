@@ -450,7 +450,7 @@ function sparkline(observations) {
 
   return `
     <svg class="sparkline" viewBox="0 0 ${width} ${height}" role="img" aria-label="Recent trend">
-      <path d="${path}" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" />
+      <path d="${path}" fill="none" stroke="#35e6b6" stroke-width="4" stroke-linecap="round" />
     </svg>
   `;
 }

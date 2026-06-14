@@ -13,35 +13,49 @@
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">Markets / Economics / Companies</p>
-          <h1>Finance Desk</h1>
+        <div class="brand-lockup">
+          <p class="eyebrow">FD-01 / Market Reasoning System</p>
+          <h1>Finance Desk <span>Signal Workstation</span></h1>
         </div>
-        <nav class="tab-list" aria-label="App sections">
-          <button class="tab-button is-active" type="button" data-tab="learn">Lessons</button>
-          <button class="tab-button" type="button" data-tab="data">Indicators</button>
-          <button class="tab-button" type="button" data-tab="news">Headlines</button>
-          <button class="tab-button" type="button" data-tab="advanced">Practice</button>
-        </nav>
+        <div class="topbar-actions">
+          <div class="status-strip" aria-label="System status">
+            <span>FRED_LINK</span>
+            <span>LOCAL_STATE</span>
+            <span>NO_KEYS</span>
+          </div>
+          <nav class="tab-list" aria-label="App sections">
+            <button class="tab-button is-active" type="button" data-tab="learn">Lessons</button>
+            <button class="tab-button" type="button" data-tab="data">Indicators</button>
+            <button class="tab-button" type="button" data-tab="news">Headlines</button>
+            <button class="tab-button" type="button" data-tab="advanced">Practice</button>
+          </nav>
+        </div>
       </header>
 
-      <main>
+      <section class="command-strip" aria-label="Workspace context">
+        <span>MODE: STUDY</span>
+        <span>SOURCE: FRED CSV</span>
+        <span>PROGRESS: LOCAL BROWSER</span>
+        <span>OUTPUT: EDUCATIONAL</span>
+      </section>
+
+      <main class="terminal-main">
         <section class="tab-panel is-active" id="learn-panel">
           <section class="stats-grid" aria-label="Progress summary">
             <article class="stat-card">
-              <span>Current level</span>
+              <span>LEVEL</span>
               <strong id="current-level">Beginner</strong>
             </article>
             <article class="stat-card">
-              <span>Mastery</span>
+              <span>MASTERY</span>
               <strong id="mastery-score">0%</strong>
             </article>
             <article class="stat-card">
-              <span>Lessons done</span>
+              <span>LESSONS</span>
               <strong id="lessons-completed">0 / 0</strong>
             </article>
             <article class="stat-card">
-              <span>Study days</span>
+              <span>SESSIONS</span>
               <strong id="study-days">0</strong>
             </article>
           </section>
