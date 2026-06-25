@@ -2,6 +2,10 @@
 
 A focused economics and finance practice desk. It starts with beginner topics and progresses into intermediate and advanced market reasoning. Progress is saved in the browser with `localStorage`.
 
+## In plain terms
+
+Finance Desk is a free, browser-based training gym for learning economics and finance — the way a flight simulator trains pilots. It starts at absolute basics and works up to real market reasoning, mixing structured lessons, quizzes, and hands-on drills that use **live Federal Reserve (FRED) economic data**. You practice interpreting headlines, predicting how markets react to events, screening companies, and journaling investment decisions. Your progress, level, and weak spots are tracked automatically in your browser.
+
 ## What it does now
 
 - Structured lessons from basic economics to harder finance topics
