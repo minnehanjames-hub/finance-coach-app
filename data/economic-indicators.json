@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T17:14:10.802Z",
+  "updatedAt": "2026-06-29T16:13:18.495Z",
   "source": "Federal Reserve Economic Data (FRED)",
   "sourceUrl": "https://fred.stlouisfed.org/",
   "series": [
@@ -1048,13 +1048,13 @@
       "interpretation": "Real GDP estimates inflation-adjusted economic output, which helps show whether the economy is expanding.",
       "latest": {
         "date": "2026-01-01",
-        "value": 24152.656
+        "value": 24180.419
       },
       "previous": {
         "date": "2025-10-01",
         "value": 24055.749
       },
-      "changeFromPrevious": 96.90699999999924,
+      "changeFromPrevious": 124.67000000000189,
       "observations": [
         {
           "date": "2011-04-01",
@@ -1294,7 +1294,7 @@
         },
         {
           "date": "2026-01-01",
-          "value": 24152.656
+          "value": 24180.419
         }
       ]
     },
@@ -1306,19 +1306,15 @@
       "sourceUrl": "https://fred.stlouisfed.org/series/MORTGAGE30US",
       "interpretation": "The 30-year mortgage rate affects monthly housing payments and buyer affordability.",
       "latest": {
+        "date": "2026-06-25",
+        "value": 6.49
+      },
+      "previous": {
         "date": "2026-06-18",
         "value": 6.47
       },
-      "previous": {
-        "date": "2026-06-11",
-        "value": 6.52
-      },
-      "changeFromPrevious": -0.04999999999999982,
+      "changeFromPrevious": 0.020000000000000462,
       "observations": [
-        {
-          "date": "2025-05-01",
-          "value": 6.76
-        },
         {
           "date": "2025-05-08",
           "value": 6.76
@@ -1554,6 +1550,10 @@
         {
           "date": "2026-06-18",
           "value": 6.47
+        },
+        {
+          "date": "2026-06-25",
+          "value": 6.49
         }
       ]
     }
